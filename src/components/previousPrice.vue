@@ -12,7 +12,7 @@
     mounted() {
       this.interval = setInterval(() => {
         this.previousPrice();
-      }, 1000 * 60);
+      }, 1000 * 60 -60);
 
       this.previousPrice();
     },

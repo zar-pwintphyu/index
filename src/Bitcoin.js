@@ -14,7 +14,7 @@ export default class Bitcoin {
   }
 
   static fetchHistory(callback) {
-    return axios.get(`https://api.coindesk.com/v1/bpi/historical/close.json?start=${moment(new Date()).subtract(1, 'week')
+    return axios.get(`https://api.coindesk.com/v1/bpi/historical/close.json?start=${moment(new Date( )).subtract(7, 'days')
       .format('YYYY-MM-DD')}&end=${moment(new Date()).format('YYYY-MM-DD')}`)
       .then(response => {
         callback(response.data.bpi);

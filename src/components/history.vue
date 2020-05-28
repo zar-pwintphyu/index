@@ -47,6 +47,8 @@
                 ticks: {
                     fontColor: "white",
                     fontStyle: "bold",
+                    
+                    
 
                     
                 },
