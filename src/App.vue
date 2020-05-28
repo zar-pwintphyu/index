@@ -15,7 +15,7 @@
     </div>
     
     <div class="grid-child">
-      <p>ようこそJDR.株式会社へ！      本日のBTCの値動きは・・・</p>
+      <h1>ようこそJDR.株式会社へ！      本日のBTCの値動きは・・・</h1>
      
     </div>
  
@@ -70,12 +70,6 @@
     font-family: $font-italic;
     font-style: italic;
 }
-p {
-    text-align: center ;
-    margin-bottom: 10vh;
-    font-size: 1.2rem;
-
-  }
 
 
 </style>
