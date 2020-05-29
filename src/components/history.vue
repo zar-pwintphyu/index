@@ -24,7 +24,6 @@
           data: {
             labels: Object.keys(this.data),
             datasets: [{
-              label: 'Price',
               data: Object.values(this.data),
               pointBackgroundColor: 'rgb(1, 255, 112)',
               borderColor: 'rgb(61, 153, 112)', 
@@ -72,7 +71,7 @@
 <style lang="scss">
   .canvasContainer {
     height: 70vh;
-    width: 90%;
+    width: 95%;
     margin: left;
   
    

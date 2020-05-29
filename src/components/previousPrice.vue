@@ -11,15 +11,15 @@
 
     mounted() {
       this.interval = setInterval(() => {
-        this.previousPrice();
-      }, 1000 * 60 -60);
+        this.updatePrice();
+      },1000 * 60);
 
-      this.previousPrice();
+      this.updatePrice();
     },
 
     methods: {
-      previousPrice() {
-        this.$bitcoin.fetchPrice((price) => {
+      updatePrice() {
+        this.$bitcoin.fetchPrice3((price) => {
           this.previousPrice = price;
         });
       }
@@ -37,6 +37,10 @@
 <style lang="scss">
   .previousPrice {
     margin: 5vh auto 0;
+    border: 2px solid darkblue;
+    border-radius: 12px;
+    background-color: darkblue;
+    
 
     h4 {
       margin: 0 0 .2vh;

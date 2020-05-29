@@ -37,8 +37,9 @@
 <style lang="scss">
   .lastPrice {
     margin: 5vh auto 0;
-    border: 2px solid blue;
+    border: 2px solid darkblue;
     border-radius: 12px;
+    background-color: darkblue;
     
 
     h4 {

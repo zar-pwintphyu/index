@@ -1,7 +1,7 @@
 <template>
-  <div class="lastPrice">
+  <div class="lowPrice">
     <h4>安値</h4>
-    <span>$ {{ lastPrice }}</span>
+    <span>$ {{ lowPrice }}</span>
   </div>
   
 </template>
@@ -19,8 +19,8 @@
 
     methods: {
       updatePrice() {
-        this.$bitcoin.fetchPrice((price) => {
-          this.lastPrice = price;
+        this.$bitcoin.fetchPrice2((price) => {
+          this.lowPrice = price;
         });
       }
     },
@@ -28,16 +28,19 @@
     data () {
       return {
         interval: null,
-        lastPrice: 0,
+        lowPrice: 0,
       }
     }
   }
 </script>
 
 <style lang="scss">
-  .lastPrice {
+  .lowPrice {
     margin: 5vh auto 0;
-
+   border: 2px solid darkblue;
+    border-radius: 12px;
+    background-color: darkblue;
+    
     h4 {
       margin: 0 0 .2vh;
       font-size: 1.5rem;

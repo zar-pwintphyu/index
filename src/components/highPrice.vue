@@ -11,15 +11,15 @@
 
     mounted() {
       this.interval = setInterval(() => {
-        this.highPrice();
-      }, 24 * 60 * 60 * 1000);
+        this.updatePrice();
+      },1000 * 60 );
 
-      this.highPrice();
+      this.updatePrice();
     },
 
     methods: {
-     highPrice() {
-        this.$bitcoin.fetchPrice((price) => {
+     updatePrice() {
+        this.$bitcoin.fetchPrice1((price) => {
           this.highPrice = price;
         });
       }
@@ -37,6 +37,10 @@
 <style lang="scss">
   .highPrice {
     margin: 5vh auto 0;
+    border: 2px solid darkblue;
+    border-radius: 12px;
+    background-color: darkblue;
+    
 
     h4 {
       margin: 0 0 .2vh;
